@@ -16,12 +16,19 @@ camera.position.setZ(30);
 
 renderer.render(scene, camera);
 
-const marsTexture = new THREE.TextureLoader().load('./assets/Mars.jpg');
-const marsNormal = new THREE.TextureLoader().load('./assets/marsNorrmal.jpg');
+import marsTextureTe from "./assets/Mars.jpg";
+const marsTexture = new THREE.TextureLoader().load(marsTextureTe);
+//const marsTexture = new THREE.TextureLoader().load('./assets/Mars.jpg');
+import marsNormalTe from "./assets/marsNorrmal.jpg";
+const marsNormal = new THREE.TextureLoader().load(marsNormalTe);
+//const marsNormal = new THREE.TextureLoader().load('./assets/marsNorrmal.jpg');
+
+import bgTe from "./assets/bg.jpg";
+const bgImage = new THREE.TextureLoader().load(bgTe);
 
 const backgroundGeometry = new THREE.SphereGeometry(250, 64, 64);
 const backgroundMaterial = new THREE.MeshBasicMaterial({
-  map: new THREE.TextureLoader().load('./assets/bg.jpg'),
+  map: bgImage,
   side: THREE.BackSide,
 })
 
